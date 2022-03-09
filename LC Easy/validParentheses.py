@@ -8,7 +8,7 @@
 class Solution:
     def validParentheses(self, s:str) -> bool:
         """
-        
+        | Checking if parentheses are opened and closed in the correct order
         """
         stack = []
         match = {'(': ')', '[': ']', '{': "}"}
