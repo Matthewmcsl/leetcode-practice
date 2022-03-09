@@ -33,7 +33,7 @@ if __name__ == '__main__':
     sol = Solution()
     print('Test Case #1: {}'.format(sol.validParentheses('{([]]]')))
     print('Test Case #2: {}'.format(sol.validParentheses('{')))
-    print('Test Case #1: {}'.format(sol.validParentheses('()[{}]')))
+    print('Test Case #3: {}'.format(sol.validParentheses('()[{}]')))
 
 
 
