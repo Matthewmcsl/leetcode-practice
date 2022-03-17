@@ -1,13 +1,14 @@
 # ==== leetcode EASY ====
 # https://leetcode.com/problems/valid-anagram/
 # Given two strings s and t, return true if t is an anagram of s, and false otherwise.
-# An Anagram is a word or phrase formed by rearranging the letters of a different word 
+# An Anagram is a word or phrase formed by rearranging the letters of a different word
 # or phrase, typically using all the original letters exactly once.
 
-class Solution():
+
+class Solution:
     def isAnagram_original(self, s: str, t: str) -> bool:
         """
-        | Checks if string 's' is an anagram of string 't'. 
+        | Checks if string 's' is an anagram of string 't'.
         """
         d1, d2 = dict(), dict()
 
@@ -25,7 +26,7 @@ class Solution():
                 d2[t[idx]] = 1
             else:
                 d2[t[idx]] += 1
-        
+
         for ele in d1:
             if d1[ele] != d2.get(ele, 0):
                 return False
@@ -42,7 +43,7 @@ class Solution():
 
         if len(s) != len(t):
             return False
-        
+
         for s_ele in s:
             tracker[s_ele] = 1 + tracker.get(s_ele, 0)
         for t_ele in t:
@@ -55,11 +56,12 @@ class Solution():
                 return False
         return True
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     sol = Solution()
     # Anagram cases
-    sol.isAnagram_original(s='mate', t='tame')
-    sol.isAnagram_optimized(s='mate', t='tame')
+    sol.isAnagram_original(s="mate", t="tame")
+    sol.isAnagram_optimized(s="mate", t="tame")
     # Non-anagram cases
-    sol.isAnagram_original(s='a', t='at')
-    sol.isAnagram_original(s='321[', t='351]')
+    sol.isAnagram_original(s="a", t="at")
+    sol.isAnagram_original(s="321[", t="351]")
