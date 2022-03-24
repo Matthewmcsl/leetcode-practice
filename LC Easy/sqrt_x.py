@@ -36,6 +36,9 @@ class Solution:
                    l/r                   -> when l = r, exit loop, and return l-1 or r-1
         floor division
         """
+        if x <= 1:
+            return x
+
         l_point, r_point = 2, x
 
         while l_point != r_point:
